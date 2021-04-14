@@ -22,7 +22,7 @@ export default function DashboardPage({ events, token }) {
       if (!res.ok) {
         toast.error(data.message)
       } else {
-        router.push('/events')
+        router.reload()
       }
     }
   }
