@@ -1,0 +1,21 @@
+.info {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: green;
+  color: #fff;
+  margin-top: -10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  padding: 0 30px;
+}
+
+@media (max-width: 600px) {
+  .info {
+    display: none;
+  }
+}
