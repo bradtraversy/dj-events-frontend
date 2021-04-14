@@ -4,6 +4,8 @@ DJ Events (Frontend)
 
 ![DJ Events](/public/images/screen.png 'DJ Events')
 
+[VIEW DEMO](https://djeventsfrontend.vercel.app)
+
 # Usage
 
 ### Setup Backend
