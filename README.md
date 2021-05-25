@@ -1,6 +1,8 @@
 DJ Events (Frontend)
 
-> Next.js website for DJ Events. This is part of my Next.js course on Udemy
+> Next.js website for DJ Events. This site uses Strapi as a backend. The repo for that is below
+
+This project is part of my [Next.js Udemy course](https://www.udemy.com/course/nextjs-dev-to-deployment)
 
 ![DJ Events](/public/images/screen.png 'DJ Events')
 
