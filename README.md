@@ -1,18 +1,4 @@
-DJ Events (Frontend)
-
-> Next.js website for DJ Events. This is part of my Next.js course on Udemy
-
-![DJ Events](/public/images/screen.png 'DJ Events')
-
-[VIEW DEMO](https://djeventsfrontend.vercel.app)
-
-# Usage
-
-### Setup Backend
-
-The Strapi backend can be found [here](https://github.com/bradtraversy/dj-events-backend)
-
-Clone the repo above and run your backend
+# SFBF Frontend
 
 ### Maps
 
