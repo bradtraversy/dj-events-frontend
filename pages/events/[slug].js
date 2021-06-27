@@ -1,22 +1,22 @@
-import { ToastContainer, toast } from 'react-toastify'
-import 'react-toastify/dist/ReactToastify.css'
-import { FaPencilAlt, FaTimes } from 'react-icons/fa'
-import Link from 'next/link'
-import Image from 'next/image'
-import Layout from '@/components/Layout'
-import EventMap from '@/components/EventMap'
-import { API_URL } from '@/config/index'
-import styles from '@/styles/Event.module.css'
-import { useRouter } from 'next/router'
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { FaPencilAlt, FaTimes } from "react-icons/fa";
+import Link from "next/link";
+import Image from "next/image";
+import Layout from "@/components/Layout";
+import EventMap from "@/components/EventMap";
+import { API_URL } from "@/config/index";
+import styles from "@/styles/Event.module.css";
+import { useRouter } from "next/router";
 
 export default function EventPage({ evt }) {
-  const router = useRouter()
+  const router = useRouter();
 
   return (
     <Layout>
       <div className={styles.event}>
         <span>
-          {new Date(evt.date).toLocaleDateString('en-US')} at {evt.time}
+          {new Date(evt.date).toLocaleDateString("en-US")} at {evt.time}
         </span>
         <h1>{evt.name}</h1>
         <ToastContainer />
@@ -31,20 +31,21 @@ export default function EventPage({ evt }) {
         )}
 
         <h3>Performers:</h3>
-        <p>{evt.performers}</p>
+        <p>{evt.performer}</p>
         <h3>Description:</h3>
         <p>{evt.description}</p>
-        <h3>Venue: {evt.venue}</h3>
+        <h3>Venue:</h3>
+        <p>{evt.venue}</p>
         <p>{evt.address}</p>
 
         <EventMap evt={evt} />
 
-        <Link href='/events'>
-          <a className={styles.back}>{'<'} Go Back</a>
+        <Link href="/events">
+          <a className={styles.back}>{"<"} Go Back</a>
         </Link>
       </div>
     </Layout>
-  )
+  );
 }
 
 // export async function getStaticPaths() {
@@ -74,12 +75,12 @@ export default function EventPage({ evt }) {
 // }
 
 export async function getServerSideProps({ query: { slug } }) {
-  const res = await fetch(`${API_URL}/events?slug=${slug}`)
-  const events = await res.json()
+  const res = await fetch(`${API_URL}/events?slug=${slug}`);
+  const events = await res.json();
 
   return {
     props: {
       evt: events[0],
     },
-  }
+  };
 }

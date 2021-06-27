@@ -1,11 +1,20 @@
-import Layout from '@/components/Layout'
+import Layout from "@/components/Layout";
+import Image from "next/image";
 
 export default function AboutPage() {
   return (
-    <Layout title='About DJ Events'>
+    <Layout title="About SF Bay Film Calendar">
       <h1>About</h1>
-      <p>This is an app to find the latest DJ and other musical events</p>
-      <p>Version: 1.0.0</p>
+      <Image src="/images/about_feature.jpg" width={960} height={500} />
+      <p>
+        The SF Bay Film Calendar is an exciting new resource for filmgoing in
+        the Bay Area. Starting in summer 2020, we will list daily showtimes for
+        independent theaters, repertory cinema, and select film series and
+        festivals. We'll also recommend a movie for the day. Currently we're
+        listing all virtual screenings being made available. As theaters begin
+        to reopen, we hope you will return and let us be your guide back to the
+        movies.
+      </p>
     </Layout>
-  )
+  );
 }
