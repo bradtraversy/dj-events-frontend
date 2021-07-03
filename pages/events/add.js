@@ -77,7 +77,7 @@ export default function AddEventPage({ token }) {
             />
           </div>
           <div>
-            <label htmlFor="performer">Performer</label>
+            <label htmlFor="performer">Director</label>
             <input
               type="text"
               name="performer"
