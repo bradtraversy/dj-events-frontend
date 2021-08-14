@@ -12,22 +12,20 @@ export default function Header() {
     <header className={styles.header}>
       <div className={styles.logo}>
         <Link href="/">
-          <a>SF Bay Film</a>
+          <a>RDMS</a>
         </Link>
       </div>
-
-      <Search />
-
       <nav>
         <ul>
-          <li>
-            <Link href="/events">
-              <a>Events</a>
-            </Link>
-          </li>
           {user ? (
             // If logged in
             <>
+              <Search />
+              <li>
+                <Link href="/events">
+                  <a>Screenings</a>
+                </Link>
+              </li>
               <li>
                 <Link href="/events/add">
                   <a>Add Event</a>
