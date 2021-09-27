@@ -1,4 +1,4 @@
-import moment from 'moment'
+
 import { FaImage } from 'react-icons/fa'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
@@ -128,7 +128,7 @@ export default function EditEventPage({ evt, token }) {
               type='date'
               name='date'
               id='date'
-              value={moment(values.date).format('yyyy-MM-DD')}
+              value={formatYmd(new Date(evt.date))}
               onChange={handleInputChange}
             />
           </div>
@@ -199,4 +199,8 @@ export async function getServerSideProps({ params: { id }, req }) {
       token,
     },
   }
+}
+
+export function formatYmd(date) {
+   return date.toISOString().slice(0, 10)
 }
