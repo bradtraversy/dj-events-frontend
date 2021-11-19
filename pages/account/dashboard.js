@@ -22,7 +22,8 @@ export default function DashboardPage({ events, token }) {
       if (!res.ok) {
         toast.error(data.message)
       } else {
-        router.reload()
+        // refresh without full page reloading
+        router.replace(router.asPath);
       }
     }
   }
