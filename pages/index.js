@@ -1,9 +1,10 @@
-import Link from 'next/link'
-import Layout from '@/components/Layout'
-import EventItem from '@/components/EventItem'
-import { API_URL } from '@/config/index'
+import Link from "next/link";
+import Layout from "@/components/Layout";
+import EventItem from "@/components/EventItem";
+import { API_URL } from "@/config/index";
 
 export default function HomePage({ events }) {
+  console.log("hello");
   return (
     <Layout>
       <h1>Upcoming Events</h1>
@@ -19,15 +20,15 @@ export default function HomePage({ events }) {
         </Link>
       )}
     </Layout>
-  )
+  );
 }
 
 export async function getStaticProps() {
-  const res = await fetch(`${API_URL}/events?_sort=date:ASC&_limit=3`)
-  const events = await res.json()
+  const res = await fetch(`${API_URL}/events?_sort=date:ASC&_limit=3`);
+  const events = await res.json();
 
   return {
     props: { events },
     revalidate: 1,
-  }
+  };
 }
